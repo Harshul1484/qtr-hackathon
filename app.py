@@ -10,18 +10,16 @@ import skfuzzy as fuzz
 import skfuzzy.control as ctrl
 
 st.set_page_config(
-    page_title="App Usage and Performance Advisor",  # Title for the browser tab
-    page_icon="📊",  # Optional: Add an icon
-    layout="centered",  # Optional: Use 'centered' or 'wide'
-    initial_sidebar_state="expanded"  # Optional: Initial sidebar state
-)
+    page_title="VIRTUAL PROJECT MANAGER",  
+    page_icon="📊",  
+    layout="centered", 
+    initial_sidebar_state="expanded"  
 
 # Load the Fine-Tuning Parameters
 # FINE_TUNING_FILE = "fine_tuning_params.txt"
 # with open(FINE_TUNING_FILE, "r") as file:
 #     fine_tuning_params = file.read()
 
-# Path to your JSON file
 DATASET_FILE = "app_usage_data.json"
 
 # Load the JSON dataset into a pandas DataFrame
@@ -43,7 +41,7 @@ for user in data:
             "success_rate": entry["success_rate"]
         })
 
-# Create DataFrame
+
 df = pd.DataFrame(users_data)
 
 # Load Hugging Face pipelines
